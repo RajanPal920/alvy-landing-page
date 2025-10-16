@@ -1,6 +1,6 @@
 @font-face {
   font-family: hell;
-  src: url("63cffc0a3942456e003bc265_Chillax-Regular.woff");
+  src: url(HelveticaNowDisplay-Regular_5Mzhp8KlA8_CAVTbnsPOM.woff2);
 }
 
 * {
@@ -347,12 +347,11 @@ main {
     }
   }
 
-  section.view8{
-    display: flex;
+  section.view8 {
     width: 100%;
     padding: 1rem;
     background-color: #cebd63;
-
+    border-radius: 0.5rem;
 
     .top {
       @include flex-coloum(2.5rem);
@@ -370,14 +369,14 @@ main {
     }
 
     .bottom {
-       display: flex;
-       align-items: center;
-       padding: 1rem;
-     
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
       button {
         gap: 1.5rem;
         width: 100vw;
-        padding:1.5rem;
+        padding: 1.5rem;
         border: none;
         outline: none;
         border-radius: 0.5rem;
@@ -385,67 +384,14 @@ main {
         background-color: black;
         font-size: 2rem;
 
-        span{
-
+        span {
           padding: 0.7rem;
           border-radius: 50%;
-          background-color: rgba(117, 117, 117, 0.337);;
+          background-color: rgba(117, 117, 117, 0.337);
         }
       }
     }
   }
- 
-  section.view0{
-     padding: 1rem;
-     width: 100%;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
- 
-
-    .left{
-      h1{
-        font-size: 1rem;
-      }
-
-
-    }
-    .right{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
-
-      p{
-  
-         padding: 0.5rem;
-         background-color: rgb(62, 62, 62);
-         border: none;
-         outline: none;
-         border-radius: 0.2rem;
-         opacity: 0;
-      }
-                  
-      button{
-         padding: 0.5rem;
-         background-color: #cebd63;
-         border: none;
-         outline: none;
-         border-radius: 0.2rem;
-      }
-     .icon{
-       padding: 0.5rem;
-       border-radius: 0.2rem;
-       background-color: rgb(53, 52, 52);
-
-     }
-
-    }
-  }
-
-
-
 }
 
 @media (min-width: 900px) {
@@ -607,27 +553,24 @@ main {
       }
     }
 
-    section.view8{
+    section.view8 {
       padding: 1rem;
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
 
-     .top{
-      width: 60%;
-       h1{
-        padding: 0 2rem;
-        font-size: 4.5rem;
-        line-height: 1;
-       }
+      .top {
+        width: 60%;
+        h1 {
+          padding: 0 2rem;
+          font-size: 4.5rem;
+          line-height: 1;
+        }
+      }
 
-     }
-       
-      .bottom{
-
-        button{
-        
+      .bottom {
+        button {
           padding: 0.5rem 2.5rem;
           display: flex;
           align-items: center;
@@ -635,46 +578,8 @@ main {
           text-align: center;
           width: fit-content;
           font-size: 1rem;
-
         }
       }
     }
- 
-    section.view0{
-      padding: 1rem;
-      width: 100%;
-      gap: 45%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-     
-
-
-      .left{
-        h1{
-       
-          font-size: 2rem;
-        }
-      }
-
-      .right{
-   
-      
-        p{
-          opacity: 1;
-          font-size: 1.2rem;
-          background-color: rgb(36, 35, 35);
-        }
-
-        button{
-       
-          font-size: 1.5rem;
-        }
-        .icon{
-          opacity: 0;
-        }
-      }
-    }
- 
   }
 }
