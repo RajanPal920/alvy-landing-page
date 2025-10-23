@@ -29,14 +29,52 @@ main {
 }
 main section {
   max-width: 1920px;
-  margin: 0 auto;
+  align-self: center;
+}
+main section.view0 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.view0 .left h4 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding: 0rem 1rem;
+}
+main section.view0 .right {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+main section.view0 .right .icon {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  background-color: rgba(117, 117, 117, 0.337);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+main section.view0 .right .icon span {
+  background-color: #cebd63;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+}
+main section.view0 .rightnav {
+  display: none;
 }
 main section.view1 {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 1rem;
+  padding: 0rem 1rem;
 }
 main section.view1 .top {
   width: 100%;
@@ -359,8 +397,139 @@ main section.view8 .bottom button span {
   border-radius: 50%;
   background-color: rgba(117, 117, 117, 0.337);
 }
+main section.view9 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% auto auto;
+  grid-template-areas: "aside" "header" "footer";
+  row-gap: 1rem;
+  padding: 2rem 0rem;
+  text-transform: uppercase;
+}
+main aside {
+  grid-area: aside;
+  background: rgba(117, 117, 117, 0.337);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main aside .top h2 {
+  font-size: 2rem;
+}
+main aside .bottom .icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+main aside .bottom .icons icon i {
+  padding: 0.8rem;
+  background-color: rgba(237, 232, 232, 0.37);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 50%;
+}
+main header {
+  grid-area: header;
+  background: rgba(117, 117, 117, 0.337);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main header h4 {
+  font-size: 1.5rem;
+}
+main header p {
+  font-size: 1rem;
+  font-weight: 100;
+  opacity: 0.6;
+  padding: 0.5rem 0rem;
+}
+main header #yellow {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #c4b152;
+  padding: 1rem 0.4rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  opacity: 1;
+}
+main footer {
+  grid-area: footer;
+  background: rgba(117, 117, 117, 0.337);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main footer .left {
+  opacity: 0.7;
+}
+main footer .left #bold {
+  font-weight: bolder;
+}
+main footer .right {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main footer .right .icon {
+  padding: 0.6rem;
+  background-color: transparent;
+  border: 1px solid;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 50%;
+}
 
 @media (min-width: 900px) {
+  main section.view0 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  main section.view0 .right {
+    display: none;
+  }
+  main section.view0 .rightnav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  main section.view0 .rightnav p {
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    background-color: rgba(117, 117, 117, 0.337);
+  }
+  main section.view0 .rightnav p span {
+    background-color: #cebd63;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+  }
+  main section.view0 .rightnav p span#arrow {
+    background-color: transparent;
+    font-weight: bold;
+  }
+  main section.view0 .rightnav #yellow {
+    background-color: #cebd63;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+  }
   main section.view1 {
     display: flex;
     flex-direction: row;
@@ -511,5 +680,120 @@ main section.view8 .bottom button span {
     width: -moz-fit-content;
     width: fit-content;
     font-size: 1rem;
+  }
+  main section.view9 {
+    width: 100%;
+    min-height: 400px;
+    padding: 1rem 0rem;
+    display: grid;
+    grid-template-columns: 0.8fr 2fr; /* left smaller, right larger */
+    grid-template-rows: auto auto; /* define two flexible rows */
+    grid-gap: 1.5rem;
+    color: #ddd;
+    grid-template-areas: "aside header" "aside footer";
+  }
+  main header {
+    height: 100%;
+    grid-area: header;
+    border-radius: 1rem;
+    background-color: rgba(117, 117, 117, 0.337);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+  main header .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  main header .left h4 {
+    text-align: start;
+    font-size: 2rem;
+  }
+  main header .center {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  main header .center h4 {
+    text-align: start;
+    font-size: 2rem;
+  }
+  main header .right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0%;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  main header .right h4 {
+    text-align: start;
+    font-size: 2rem;
+  }
+  main header #yellow {
+    background-color: #cebd63;
+    padding: 1rem 0.4rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    opacity: 1;
+  }
+  main aside {
+    grid-area: aside;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: rgba(117, 117, 117, 0.337);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main aside h2 {
+    font-size: 2rem;
+  }
+  main aside .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.7rem;
+  }
+  main aside .icons icon i {
+    padding: 0.8rem;
+    background-color: rgba(229, 223, 223, 0.337);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border-radius: 50%;
+  }
+  main footer {
+    grid-area: footer;
+    border-radius: 1rem;
+    background-color: rgba(117, 117, 117, 0.337);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1rem;
+  }
+  main footer .left {
+    opacity: 0.6;
+  }
+  main footer .left #bold {
+    font-weight: bolder;
+  }
+  main footer .right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  main footer .right .icon {
+    padding: 0.6rem;
+    background-color: transparent;
+    border: 1px solid;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border-radius: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
